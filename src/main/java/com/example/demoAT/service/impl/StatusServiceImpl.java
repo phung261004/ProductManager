@@ -1,8 +1,8 @@
-package com.example.demoAT.sevice.impl;
+package com.example.demoAT.service.impl;
 
 import com.example.demoAT.entity.Status;
 import com.example.demoAT.repository.StatusRepository;
-import com.example.demoAT.sevice.StatusService;
+import com.example.demoAT.service.StatusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

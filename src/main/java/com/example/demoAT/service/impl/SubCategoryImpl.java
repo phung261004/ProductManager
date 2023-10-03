@@ -1,4 +1,4 @@
-package com.example.demoAT.sevice.impl;
+package com.example.demoAT.service.impl;
 
 import com.example.demoAT.entity.SubCategory;
 import com.example.demoAT.repository.SubCategoryRepository;

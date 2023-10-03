@@ -1,12 +1,11 @@
 package com.example.demoAT.controller;
 
 import com.example.demoAT.entity.Brand;
-import com.example.demoAT.sevice.impl.BrandServiceImpl;
+import com.example.demoAT.service.impl.BrandServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/brands")

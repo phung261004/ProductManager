@@ -1,7 +1,7 @@
 package com.example.demoAT.controller;
 
 import com.example.demoAT.entity.Product;
-import com.example.demoAT.sevice.impl.ProductServiceImpl;
+import com.example.demoAT.service.impl.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

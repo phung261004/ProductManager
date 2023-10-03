@@ -2,7 +2,7 @@ package com.example.demoAT.controller;
 
 
 import com.example.demoAT.entity.Category;
-import com.example.demoAT.sevice.impl.CategoryServiceImpl;
+import com.example.demoAT.service.impl.CategoryServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

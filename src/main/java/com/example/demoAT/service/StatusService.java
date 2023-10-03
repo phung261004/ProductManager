@@ -1,4 +1,4 @@
-package com.example.demoAT.sevice;
+package com.example.demoAT.service;
 
 
 import com.example.demoAT.entity.Status;

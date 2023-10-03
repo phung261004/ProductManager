@@ -1,7 +1,7 @@
 package com.example.demoAT.controller;
 
 import com.example.demoAT.entity.Status;
-import com.example.demoAT.sevice.impl.StatusServiceImpl;
+import com.example.demoAT.service.impl.StatusServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

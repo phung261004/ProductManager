@@ -1,9 +1,8 @@
-package com.example.demoAT.sevice;
+package com.example.demoAT.service;
 
 import com.example.demoAT.entity.Product;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ProductService {
     List<Product> getAllProduct();

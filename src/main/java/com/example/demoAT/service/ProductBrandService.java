@@ -1,5 +1,5 @@
-package com.example.demoAT.sevice;
+package com.example.demoAT.service;
 
 public interface ProductBrandService {
-    
+
 }
