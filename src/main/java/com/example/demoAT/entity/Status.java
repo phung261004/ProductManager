@@ -1,21 +1,21 @@
 package com.example.demoAT.entity;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 
 @Entity
 @Table(name = "status")
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
-public class Status implements Serializable {
+@AllArgsConstructor
+public class Status  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name = "status_name", nullable = false, unique = true)
     private String statusName;
-
 
 }

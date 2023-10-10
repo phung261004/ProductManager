@@ -1,18 +1,22 @@
 package com.example.demoAT.service;
 
 import com.example.demoAT.entity.Product;
+import com.example.demoAT.model.request.AddProductRequest;
+import com.example.demoAT.model.request.UpdateProductRequest;
+import com.example.demoAT.model.response.ProductDetailResponse;
+import com.example.demoAT.model.response.ProductResponse;
 
 import java.util.List;
 
 public interface ProductService {
-    List<Product> getAllProduct();
+    List<ProductResponse> getAllProduct();
 
-    Product getProductBtId(Integer id);
+    ProductResponse getProductById(Long id);
 
-    Product saveProduct(Product product);
+    AddProductRequest saveProduct(AddProductRequest addProductRequest);
 
-    void deleteProduct(Integer id);
+    String deleteProduct(Long id);
 
-    Product updateProduct(Integer id, Product product);
+    String updateProduct(Long id, UpdateProductRequest updateProductRequest);
 
 }

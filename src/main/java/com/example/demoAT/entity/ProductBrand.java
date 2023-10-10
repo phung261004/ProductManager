@@ -1,27 +1,27 @@
 package com.example.demoAT.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import java.io.Serializable;
+import lombok.*;
 
 @Entity
 @Table(name = "product_brand")
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
-public class ProductBrand implements Serializable {
+@AllArgsConstructor
+public class ProductBrand{
 
     @EmbeddedId
     private ProductBrandPK id;
 
-    @JoinColumn(name = "product_id", nullable = false)
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @MapsId("productId")
+    @JoinColumn(name = "product_id")
     private Product product;
 
-    @JoinColumn(name = "brand_id", nullable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @MapsId("brandId")
+    @JoinColumn(name = "brand_id")
     private Brand brand;
 
 

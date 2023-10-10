@@ -20,12 +20,8 @@ public class SubCategoryController {
     }
 
     @GetMapping("/{id}")
-    public SubCategory getSubcategoryById(@PathVariable Integer id) {
+    public SubCategory getSubcategoryById(@PathVariable Long id) {
         return subCategoryImpl.getSubcategoryById(id);
     }
 
-    @PostMapping("/add")
-    public SubCategory addSubcategory(@RequestBody SubCategory subcategory) {
-        return subCategoryImpl.saveSubcategory(subcategory);
-    }
 }

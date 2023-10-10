@@ -1,19 +1,18 @@
 package com.example.demoAT.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
+import lombok.*;
 
 @Entity
 @Table(name = "sub_category")
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
-public class SubCategory implements Serializable {
+@AllArgsConstructor
+public class SubCategory{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name = "sub_cate_code", unique = true, nullable = false)
     private String subCateCode;
@@ -21,7 +20,7 @@ public class SubCategory implements Serializable {
     @Column(name = "sub_cate_name", nullable = false)
     private String subCateName;
 
-    @JoinColumn(name = "cate_id", nullable = false, referencedColumnName = "id")
+    @JoinColumn(name = "cate_id", nullable = false)
     @ManyToOne
     private Category category;
 

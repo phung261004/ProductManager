@@ -19,28 +19,9 @@ public class BrandServiceImpl implements BrandService {
     }
 
     @Override
-    public Brand getBrandById(Integer id) {
+    public Brand getBrandById(Long id) {
         return brandRepository.findById(id).orElse(null);
     }
 
-    @Override
-    public Brand saveBrand(Brand brand) {
-        return brandRepository.save(brand);
-    }
 
-    @Override
-    public void deleteBrand(Integer id) {
-        brandRepository.deleteById(id);
-    }
-
-    @Override
-    public Brand updateBrand(Integer id, Brand brand) {
-        Brand existingBrand = brandRepository.findById(id).orElse(null);
-        if(existingBrand!=null) {
-            existingBrand.setBrandName(brand.getBrandName());
-            return brandRepository.save(existingBrand);
-        } else {
-            return null;
-        }
-    }
 }

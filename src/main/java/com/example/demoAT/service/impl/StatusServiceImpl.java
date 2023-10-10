@@ -21,7 +21,7 @@ public class StatusServiceImpl implements StatusService {
     }
 
     @Override
-    public Status getStatusById(Integer id) {
+    public Status getStatusById(Long id) {
         return statusRepository.findById(id).orElse(null);
     }
 
@@ -31,12 +31,12 @@ public class StatusServiceImpl implements StatusService {
     }
 
     @Override
-    public void deleteStatus(Integer id) {
+    public void deleteStatus(Long id) {
         statusRepository.deleteById(id);
     }
 
     @Override
-    public Status updateStatus(Integer id, Status status) {
+    public Status updateStatus(Long id, Status status) {
         Status existingStatus = statusRepository.findById(id).orElse(null);
         if(existingStatus != null) {
             existingStatus.setStatusName(status.getStatusName());

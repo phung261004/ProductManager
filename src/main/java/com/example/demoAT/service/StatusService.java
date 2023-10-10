@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface StatusService {
     List<Status> getAllStatus();
-    Status getStatusById(Integer id);
+    Status getStatusById(Long id);
 
     Status createStatus(Status status);
 
-    void deleteStatus(Integer id);
+    void deleteStatus(Long id);
 
-    Status updateStatus(Integer id, Status status);
+    Status updateStatus(Long id, Status status);
 }

@@ -1,20 +1,19 @@
 package com.example.demoAT.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.io.Serializable;
+import lombok.*;
 
 @Entity
 @Table(name = "brand")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
-public class Brand implements Serializable {
+@AllArgsConstructor
+public class Brand{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name = "brand_name", nullable = false, unique = true)
     private String brandName;
